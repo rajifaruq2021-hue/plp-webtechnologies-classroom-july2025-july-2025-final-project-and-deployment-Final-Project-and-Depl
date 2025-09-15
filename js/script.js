@@ -1,13 +1,31 @@
-// This script will only run on the contact page, but we add a check to be safe.
+// --- Interactive Feature: Animate Elements on Scroll ---
+document.addEventListener('DOMContentLoaded', () => {
+    // This is a modern way to check if an element is visible on the screen.
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // If the element is on the screen (is intersecting)
+            if (entry.isIntersecting) {
+                // Add the 'visible' class to trigger the CSS animation
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1 // Trigger when 10% of the element is visible
+    });
+
+    // Find all elements we want to animate and tell the observer to watch them.
+    const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+    elementsToAnimate.forEach(el => observer.observe(el));
+});
+
+
+// --- Form Validation (for Contact Page) ---
 const form = document.getElementById('contact-form');
 
-// This 'if' statement prevents errors on pages that don't have the form.
 if (form) {
     form.addEventListener('submit', function(event) {
-        // Stop the form from submitting the traditional way
         event.preventDefault();
 
-        // Get the form elements
         const nameInput = document.getElementById('name');
         const emailInput = document.getElementById('email');
         const messageInput = document.getElementById('message');
@@ -18,7 +36,6 @@ if (form) {
 
         let isValid = true;
 
-        // Name validation
         if (nameInput.value.trim() === '') {
             nameError.textContent = 'Name is required.';
             isValid = false;
@@ -26,7 +43,6 @@ if (form) {
             nameError.textContent = '';
         }
 
-        // Email validation
         if (!emailInput.value.includes('@') || !emailInput.value.includes('.')) {
             emailError.textContent = 'Please enter a valid email.';
             isValid = false;
@@ -34,18 +50,19 @@ if (form) {
             emailError.textContent = '';
         }
 
-        // Message validation
         if (messageInput.value.trim().length < 10) {
-            messageError.textContent = 'Message must be at least 10 characters.';
+            messageError.textContent = 'Message must be at least 10 characters long.';
             isValid = false;
         } else {
             messageError.textContent = '';
         }
 
-        // If all fields are valid, show success message
         if (isValid) {
-            alert('Thank you for your message! I will get back to you soon.');
+            alert('Thank you for your message, ' + nameInput.value.trim() + '! I will be in touch soon.');
             form.reset();
+            nameError.textContent = '';
+            emailError.textContent = '';
+            messageError.textContent = '';
         }
     });
 }
