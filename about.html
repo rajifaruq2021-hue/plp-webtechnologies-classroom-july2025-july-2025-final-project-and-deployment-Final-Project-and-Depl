@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Raji Faruq Ishola's Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">RFI</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class="container">
+        <section class="card">
+            <h2>About Me</h2>
+            <p>Hello! I am Raji Faruq Ishola, a passionate web developer currently honing my skills through the Power Learn Project (PLP). My journey into technology is driven by a desire to build solutions that are both functional and beautiful.</p>
+            <p>This website is my final project, a culmination of everything I have learned about HTML, CSS, and JavaScript. It demonstrates my ability to create structured, stylish, and interactive multi-page websites from scratch.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Raji Faruq Ishola. All rights reserved.</p>
+    </footer>
+</body>
+</html>```
+
+#### `contact.html` (Contact Page)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Raji Faruq Ishola's Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">RFI</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Get In Touch</h2>
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <span class="error" id="message-error"></span>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Raji Faruq Ishola. All rights reserved.</p>
+    </footer>
+
+    <!-- This script is only needed for the contact page -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
