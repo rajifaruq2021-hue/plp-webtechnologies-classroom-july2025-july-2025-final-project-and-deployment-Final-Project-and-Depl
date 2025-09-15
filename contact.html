@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Raji Faruq Ishola</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Raji Faruq Ishola</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class="container">
+        <section class="content-section animate-on-scroll">
+            <h2>Let's Connect</h2>
+            <p>I am always open to discussing new projects, creative ideas, or opportunities to be part of a vision. Feel free to reach out to me.</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="mailto:faruqraji604@gmail.com">faruqraji604@gmail.com</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/faruq-raji-24376235b" target="_blank">linkedin.com/in/faruq-raji</a></p>
+            </div>
+        </section>
+
+        <section class="content-section animate-on-scroll">
+            <h2>Send Me a Message</h2>
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" required>
+                    <span class="error" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" required>
+                    <span class="error" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" rows="5" required></textarea>
+                    <span class="error" id="message-error"></span>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Raji Faruq Ishola. Designed with passion.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
