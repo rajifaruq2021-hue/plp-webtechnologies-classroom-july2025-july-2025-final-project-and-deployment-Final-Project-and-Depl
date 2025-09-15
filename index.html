@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Raji Faruq Ishola's Portfolio</title>
+    <title>Raji Faruq Ishola - Petroleum Engineering & Sustainable Development</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html" class="logo">RFI</a>
+        <nav class="container">
+            <a href="index.html" class="logo">Raji Faruq Ishola</a>
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -18,16 +21,27 @@
         </nav>
     </header>
 
-    <main class="home-hero">
-        <div class="hero-text">
-            <h1>Welcome to My Digital Portfolio</h1>
-            <p>A showcase of my journey in web development. Explore my work and get in touch!</p>
-            <a href="contact.html" class="cta-button">Contact Me</a>
-        </div>
+    <main>
+        <section class="hero">
+            <div class="hero-content container">
+                <div class="hero-text">
+                    <h1 class="animate-on-scroll">Engineering Student Passionate About Sustainable Development & Data Analysis</h1>
+                    <p class="animate-on-scroll">Applying a strong analytical mindset to solve complex challenges in engineering and community development.</p>
+                    <a href="about.html" class="cta-button animate-on-scroll">Learn More About Me</a>
+                </div>
+                <div class="hero-image animate-on-scroll">
+                    <img src="images/profile-photo.jpg" alt="A professional photo of Raji Faruq Ishola">
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Raji Faruq Ishola. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Raji Faruq Ishola. Designed with passion.</p>
+        </div>
     </footer>
+
+    <script src="js/script.js" defer></script>
 </body>
 </html>
